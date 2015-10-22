@@ -1,0 +1,19 @@
+def main ():
+    #take the derivative of polynomial given in a list
+    #example poly = [3,2,1] = 3x^2 + 2x + 1 
+    poly = [4,3,2,1]
+
+    #get power of x from the list location
+    power = len(poly)-1
+    print(power)
+
+    #return value to hold derivtive
+    result = ""
+
+    #go through list and calculate the derivative of each term
+    for i in range (len(poly)-1):
+        result = result+str(power*poly[i])+"x^"+str(power-1)+"+"
+        power = power -1
+    print (result)
+    
+main() 
